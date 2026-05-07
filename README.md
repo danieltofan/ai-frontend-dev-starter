@@ -5,6 +5,14 @@ The fork-target scaffold for the Neurons Lab Framework Battle course. Three fram
 > **Course:** [neurons-lab.pages.dev/courses/framework-battle](https://neurons-lab.pages.dev/courses/framework-battle)
 > **Reference implementation:** [github.com/danieltofan/globe-explorer](https://github.com/danieltofan/globe-explorer)
 
+## Prerequisites
+
+- **Node.js 20.19+** or **22.12+**. Vite 7 requires recent Node. Check with `node --version`. If you're below 20.19, upgrade via [nodejs.org](https://nodejs.org/) or your version manager (nvm, fnm, volta).
+- **npm 10+** (ships with Node 20+).
+- **Git** for cloning your fork.
+- **A GitHub account** for the fork.
+- **A code editor.** VS Code is the smoothest pick; framework-specific extension recommendations are in each framework folder's README.
+
 ## How to use this
 
 This is a **fork-only** repo. You do not clone it directly and you do not contribute back. You **fork it on GitHub**, clone your fork, and build in your fork.
@@ -77,14 +85,14 @@ Module slugs match the production Globe Explorer codebase (`compare`, `hundred-p
 
 ## Pick a framework
 
-| If you... | Use |
-|---|---|
-| ...already write Vue at work | `vue/` (Composition API + `<script setup>`) |
-| ...are curious about Svelte 5 runes | `svelte/` (Svelte 5 with `$state`, `$derived`, `$effect`) |
-| ...are most comfortable in React | `react/` (React 19 with hooks) |
-| ...want to compare frameworks | Pick one to lead, build Modules 1 and 2 there, then redo Module 1 in another. The lessons present all three side by side. |
+| If you... | Use | Per-framework README |
+|---|---|---|
+| ...already write Vue at work | `vue/` (Composition API + `<script setup>`) | [vue/README.md](./vue/README.md) |
+| ...are curious about Svelte 5 runes | `svelte/` (Svelte 5 with `$state`, `$derived`, `$effect`) | [svelte/README.md](./svelte/README.md) |
+| ...are most comfortable in React | `react/` (React 19 with hooks + StrictMode) | [react/README.md](./react/README.md) |
+| ...want to compare frameworks | Pick one to lead, build Modules 1 and 2 there, then redo Module 1 in another. Lessons present all three side by side. | All three |
 
-You don't have to commit to one. The folders are independent.
+The folders are independent: installing in one doesn't affect the others. Each per-framework README covers install, dev/build/test commands, the wiring loop for your first feature, framework-specific gotchas, and troubleshooting.
 
 ## Updating from upstream
 
@@ -97,6 +105,26 @@ git merge upstream/main
 ```
 
 Most students will never need to do this. The starter is meant to be stable; the course content evolves on Lab, not in this repo.
+
+## Common questions
+
+**Do I need to install all three framework folders?**
+No. Pick one. The folders are independent. `npm install` inside `vue/` only affects `vue/`; the other two are untouched until you run `npm install` in them.
+
+**Can I do the course without ever running `npm install`?**
+Sort of. Every lesson has live in-browser code playgrounds (LiveCode iframes via livecodes.io) that show the running result in all three frameworks side by side. You can read the lessons and watch the code work without ever leaving the browser. But the full hands-on experience (your own repo, your own tests, your own commits, your own deploy) means installing locally in your fork.
+
+**What if I want to deploy my finished work?**
+`npm run build` in any framework folder produces a static `dist/` directory. Drop that into Cloudflare Pages, GitHub Pages, Vercel, Netlify, or any static host. The course doesn't teach DevOps; that's intentional.
+
+**Do I need to know all three frameworks?**
+No. Pick one to lead. The course shows all three side by side in every LiveCode block, so you'll see the contrasts even if you only build in one. Most students do one framework end to end, then maybe redo Module 1 in a second framework as a comparison exercise.
+
+**Can I commit my work to my fork?**
+Yes, that's the entire point. Your fork is your project. Commit, push, share with employers as a portfolio piece. The capstone (Module 5) explicitly references your fork's repo URL as a submission field for the optional showcase consent.
+
+**What if `npm install` fails?**
+Check your Node version (`node --version`). Vite 7 needs Node 20.19+ or 22.12+. The next-most-common cause is a network issue (firewall, corporate proxy). Per-framework READMEs have a Troubleshooting section with more specific cases.
 
 ## License
 
