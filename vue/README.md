@@ -1,6 +1,6 @@
-# Framework Battle Starter (Vue)
+# AI-Assisted Frontend Development Starter (Vue)
 
-Vue 3.5 (Composition API + `<script setup>`) scaffold for the Neurons Lab Framework Battle course.
+Vue 3.5 (Composition API + `<script setup>`) scaffold for the Neurons Lab AI-Assisted Frontend Development course.
 
 ## Prerequisites
 
@@ -18,7 +18,7 @@ npm install
 npm run dev
 ```
 
-Vite prints the URL it serves on (default `http://localhost:5173`). Open it. You should see the **Framework Battle Starter** welcome card with DaisyUI styling. That confirms the scaffold runs end-to-end.
+Vite prints the URL it serves on (default `http://localhost:5173`). Open it. You should see the **AI-Assisted Frontend Development Starter** welcome card with DaisyUI styling. That confirms the scaffold runs end-to-end.
 
 If port 5173 is in use, Vite picks the next free port automatically and tells you which one. Or run `npm run dev -- --port 3000` to force a specific port.
 
@@ -228,6 +228,6 @@ Tests run through the same Vite config as the dev server, so the `@` alias works
 
 ## What this is not
 
-- **Not a tutorial.** Build features by following the [Lab course](https://neurons-lab.pages.dev/courses/framework-battle); the scaffold is just the runway.
+- **Not a tutorial.** Build features by following the [Lab course](https://neurons-lab.pages.dev/courses/ai-frontend-dev); the scaffold is just the runway.
 - **Not a contribution target.** Fork-only. Issues and PRs to upstream get closed without comment. Your fork is your project.
 - **Not an answer key.** The reference implementation is at [github.com/danieltofan/globe-explorer](https://github.com/danieltofan/globe-explorer); compare after you finish a module, not before.

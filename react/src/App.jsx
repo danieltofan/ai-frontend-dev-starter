@@ -12,7 +12,7 @@ export default function App() {
     <main className="min-h-screen bg-base-100 flex items-center justify-center p-8">
       <div className="card bg-base-200 shadow-xl max-w-2xl">
         <div className="card-body">
-          <h1 className="card-title text-3xl">Framework Battle Starter</h1>
+          <h1 className="card-title text-3xl">AI-Assisted Frontend Development Starter</h1>
           <p className="text-base-content/70">React 19 + Vite + Tailwind v4 + DaisyUI v5 + Vitest</p>
 
           <div className="divider"></div>
@@ -24,7 +24,7 @@ export default function App() {
               Open the Lab course at{' '}
               <a
                 className="link link-primary"
-                href="https://neurons-lab.pages.dev/courses/framework-battle"
+                href="https://neurons-lab.pages.dev/courses/ai-frontend-dev"
                 target="_blank"
                 rel="noopener noreferrer"
               >

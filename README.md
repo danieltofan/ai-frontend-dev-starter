@@ -1,8 +1,8 @@
-# Framework Battle Starter
+# AI-Assisted Frontend Development Starter
 
-The fork-target scaffold for the Neurons Lab Framework Battle course. Three framework variants (Vue 3, Svelte 5, React 19) sharing the same dataset, the same project structure, and the same Tailwind v4 + DaisyUI v5 + Vitest tooling, so you can pick a framework and build along with the lessons without fighting setup.
+The fork-target scaffold for the Neurons Lab AI-Assisted Frontend Development course. Three framework variants (Vue 3, Svelte 5, React 19) sharing the same dataset, the same project structure, and the same Tailwind v4 + DaisyUI v5 + Vitest tooling, so you can pick a framework and build along with the lessons without fighting setup.
 
-> **Course:** [neurons-lab.pages.dev/courses/framework-battle](https://neurons-lab.pages.dev/courses/framework-battle)
+> **Course:** [neurons-lab.pages.dev/courses/ai-frontend-dev](https://neurons-lab.pages.dev/courses/ai-frontend-dev)
 > **Reference implementation:** [github.com/danieltofan/globe-explorer](https://github.com/danieltofan/globe-explorer)
 
 ## Prerequisites
@@ -18,10 +18,10 @@ The fork-target scaffold for the Neurons Lab Framework Battle course. Three fram
 This is a **fork-only** repo. You do not clone it directly and you do not contribute back. You **fork it on GitHub**, clone your fork, and build in your fork.
 
 ```bash
-# 1. Fork github.com/danieltofan/framework-battle-starter on GitHub (top-right Fork button)
+# 1. Fork github.com/danieltofan/ai-frontend-dev-starter on GitHub (top-right Fork button)
 # 2. Clone YOUR fork (substitute your username)
-git clone https://github.com/YOUR-USERNAME/framework-battle-starter
-cd framework-battle-starter
+git clone https://github.com/YOUR-USERNAME/ai-frontend-dev-starter
+cd ai-frontend-dev-starter
 
 # 3. Pick a framework folder (vue / svelte / react)
 cd vue                          # or svelte, or react
@@ -33,7 +33,7 @@ npm install
 npm run dev
 ```
 
-Open the URL Vite prints (usually `http://localhost:5173`). You should see a "Framework Battle Starter" welcome card. That confirms the scaffold runs cleanly.
+Open the URL Vite prints (usually `http://localhost:5173`). You should see an "AI-Assisted Frontend Development Starter" welcome card. That confirms the scaffold runs cleanly.
 
 From there: open the Lab course, work through Module 0 setup lessons if you haven't, then start Module 1.
 
@@ -99,7 +99,7 @@ The folders are independent: installing in one doesn't affect the others. Each p
 If the upstream starter (this repo) gets a meaningful update (new dependency version, fix in the scaffold), you can pull it into your fork:
 
 ```bash
-git remote add upstream https://github.com/danieltofan/framework-battle-starter
+git remote add upstream https://github.com/danieltofan/ai-frontend-dev-starter
 git fetch upstream
 git merge upstream/main
 ```

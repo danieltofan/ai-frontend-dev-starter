@@ -1,9 +1,9 @@
 {
-  "name": "framework-battle-starter-vue",
+  "name": "ai-frontend-dev-starter-vue",
   "private": true,
   "version": "0.1.0",
   "type": "module",
-  "description": "Vue 3 starter scaffold for the Neurons Lab Framework Battle course",
+  "description": "Vue 3 starter scaffold for the Neurons Lab AI-Assisted Frontend Development course",
   "scripts": {
     "dev": "vite",
     "build": "vite build",

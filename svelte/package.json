@@ -1,9 +1,9 @@
 {
-  "name": "framework-battle-starter-svelte",
+  "name": "ai-frontend-dev-starter-svelte",
   "private": true,
   "version": "0.1.0",
   "type": "module",
-  "description": "Svelte 5 starter scaffold for the Neurons Lab Framework Battle course",
+  "description": "Svelte 5 starter scaffold for the Neurons Lab AI-Assisted Frontend Development course",
   "scripts": {
     "dev": "vite",
     "build": "vite build",

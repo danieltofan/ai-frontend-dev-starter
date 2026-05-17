@@ -1,6 +1,6 @@
-# Framework Battle Starter (React)
+# AI-Assisted Frontend Development Starter (React)
 
-React 19 (with hooks) scaffold for the Neurons Lab Framework Battle course.
+React 19 (with hooks) scaffold for the Neurons Lab AI-Assisted Frontend Development course.
 
 ## Prerequisites
 
@@ -18,7 +18,7 @@ npm install
 npm run dev
 ```
 
-Vite prints the URL it serves on (default `http://localhost:5173`). Open it. You should see the **Framework Battle Starter** welcome card with DaisyUI styling.
+Vite prints the URL it serves on (default `http://localhost:5173`). Open it. You should see the **AI-Assisted Frontend Development Starter** welcome card with DaisyUI styling.
 
 If port 5173 is in use, Vite picks the next free port and tells you which one. Or `npm run dev -- --port 3000`.
 
@@ -242,6 +242,6 @@ setState({ ...state, foo: 'bar' })
 
 ## What this is not
 
-- **Not a tutorial.** Build features by following the [Lab course](https://neurons-lab.pages.dev/courses/framework-battle); the scaffold is just the runway.
+- **Not a tutorial.** Build features by following the [Lab course](https://neurons-lab.pages.dev/courses/ai-frontend-dev); the scaffold is just the runway.
 - **Not a contribution target.** Fork-only. Issues and PRs to upstream get closed without comment.
 - **Not an answer key.** Reference implementation at [github.com/danieltofan/globe-explorer](https://github.com/danieltofan/globe-explorer); compare after you finish, not before. The reference is in Vue; React-port equivalents are not separately published.

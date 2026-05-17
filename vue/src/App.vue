@@ -13,7 +13,7 @@
   <main class="min-h-screen bg-base-100 flex items-center justify-center p-8">
     <div class="card bg-base-200 shadow-xl max-w-2xl">
       <div class="card-body">
-        <h1 class="card-title text-3xl">Framework Battle Starter</h1>
+        <h1 class="card-title text-3xl">AI-Assisted Frontend Development Starter</h1>
         <p class="text-base-content/70">Vue 3 + Vite + Tailwind v4 + DaisyUI v5 + Vitest</p>
 
         <div class="divider"></div>
@@ -24,7 +24,7 @@
           <li>Open the Lab course at
             <a
               class="link link-primary"
-              href="https://neurons-lab.pages.dev/courses/framework-battle"
+              href="https://neurons-lab.pages.dev/courses/ai-frontend-dev"
               target="_blank"
               rel="noopener noreferrer"
             >
