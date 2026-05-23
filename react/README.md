@@ -18,7 +18,7 @@ npm install
 npm run dev
 ```
 
-Vite prints the URL it serves on (default `http://localhost:5173`). Open it. You should see the **AI-Assisted Frontend Development Starter** welcome card with DaisyUI styling.
+Vite prints the URL it serves on (default `http://localhost:5173`). Open it. You should see the **AI-Assisted Frontend Development Starter** welcome card with DaisyUI styling, followed by a pre-assembled **Module 1 Compare** reference (the cross-framework parity demo — see [the root README](../README.md#reference-implementation-module-1-compare) for what it is and why it ships pre-built).
 
 If port 5173 is in use, Vite picks the next free port and tells you which one. Or `npm run dev -- --port 3000`.
 
@@ -43,7 +43,7 @@ react/
 ├── index.html                        Vite entry HTML; mounts to <div id="root">
 └── src/
     ├── main.jsx                      createRoot + StrictMode
-    ├── App.jsx                       Welcome-card placeholder; replace as you build
+    ├── App.jsx                       Welcome card + mounts the assembled Compare reference
     ├── style.css                     @import "tailwindcss"; @plugin "daisyui";
     ├── assets/
     │   └── categories/               19 silhouette PNGs (continent shapes + mode icons)
@@ -51,7 +51,7 @@ react/
     │   └── data/
     │       └── regions.js            100 People dataset (Compare + 100 People)
     └── features/
-        ├── compare/                  Module 1; create Compare.jsx here
+        ├── compare/                  Module 1; Compare.jsx + logic.js pre-assembled (Lessons 1-4 reference; overwrite when you author)
         ├── hundred-people/           Module 2; create HundredPeople.jsx here
         ├── countries-cartogram/      Module 3
         │   └── countries.js          195-country cartogram dataset
@@ -61,9 +61,11 @@ react/
 
 ## Wiring your first feature
 
+> **Note on Module 1.** `src/features/compare/Compare.jsx` ships **pre-assembled** as the cross-framework parity reference and covers Lessons 1–4 (data + dropdowns, comparison logic, progress bars, formatting + swap + flags). Lesson 5 (typeahead) is yours to add on top. When you start authoring Module 1 yourself, just overwrite the file lesson by lesson — git remembers the reference if you ever want to diff back. The pre-assembled file is for trust-checking the translation across frameworks before you commit to one.
+
 **Step 1: Create the feature file.** In your editor, create the JSX component for the module you're working on:
 
-- Module 1: `src/features/compare/Compare.jsx`
+- Module 1: `src/features/compare/Compare.jsx` (overwrites the pre-assembled reference)
 - Module 2: `src/features/hundred-people/HundredPeople.jsx`
 - Module 3: `src/features/countries-cartogram/Cartogram.jsx`
 - Module 4: `src/features/language-space/LanguageSpace.jsx`
@@ -92,7 +94,7 @@ export default function Compare() {
 }
 ```
 
-**Step 3: Mount it from `App.jsx`.** Replace the placeholder welcome card:
+**Step 3: Mount it from `App.jsx`.** The shipped `App.jsx` mounts the assembled Compare reference below the welcome card; when you're ready to render your own work, replace that mount (or remove the welcome card too if you want a fullscreen feature):
 
 ```jsx
 import Compare from './features/compare/Compare.jsx'

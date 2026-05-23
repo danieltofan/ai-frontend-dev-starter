@@ -33,9 +33,27 @@ npm install
 npm run dev
 ```
 
-Open the URL Vite prints (usually `http://localhost:5173`). You should see an "AI-Assisted Frontend Development Starter" welcome card. That confirms the scaffold runs cleanly.
+Open the URL Vite prints (usually `http://localhost:5173`). You should see an "AI-Assisted Frontend Development Starter" welcome card followed by a **pre-assembled Module 1 Compare** reference (more on that below). That confirms the scaffold runs cleanly.
 
 From there: open the Lab course, work through Module 0 setup lessons if you haven't, then start Module 1.
+
+## Reference implementation: Module 1 Compare
+
+One feature ships pre-assembled in all three framework folders:
+
+| Framework | File |
+|---|---|
+| Vue | [`vue/src/features/compare/Compare.vue`](./vue/src/features/compare/Compare.vue) |
+| React | [`react/src/features/compare/Compare.jsx`](./react/src/features/compare/Compare.jsx) |
+| Svelte | [`svelte/src/features/compare/Compare.svelte`](./svelte/src/features/compare/Compare.svelte) |
+
+Each implements the same UI — two country dropdowns, a swap button, and five bilateral metric progress bars sourced from the shipped 195-country dataset. The point is **verifiable cross-framework parity**: clone, `npm install`, `npm run dev`, see the same UI render in whichever framework folder you pick.
+
+Diff the three files side by side to see how the same data flow expresses itself in each idiom (`ref` + `computed`, `useState` + `useMemo`, `$state` + `$derived`). When you start authoring Module 1 yourself, replace the `<Compare />` mount in `App.{vue,jsx,svelte}` with your own work.
+
+**Scope:** the reference covers Module 1 Lessons 1–4 (data + dropdowns, comparison logic, progress bars, formatting + swap + flags). Lesson 5 (typeahead) is intentionally NOT pre-assembled — that's the workshop slice you build on top using AI, the same way the course was assembled. Modules 2, 3, and 4 (`hundred-people/`, `countries-cartogram/`, `language-space/`) are empty by design — you build them by following the lessons.
+
+**Note on flag rendering:** the country-header section uses image flags served from [flagcdn.com](https://flagcdn.com) (lazy-loaded, sized to `w160`) rather than emoji, so the visual is identical across all OSes — no Windows regional-indicator-pair limitation to work around. Dropdowns themselves show plain country names (the flag image lives in the header card).
 
 ## What's pre-shipped (and why)
 
@@ -47,7 +65,7 @@ The hand-curated datasets the course depends on:
 | `src/features/countries-cartogram/countries.js` | Cartogram (Module 3) | 412 lines, 195 countries | Hand-curated x/y for every country. AI cannot generate these; geographic placement requires human judgment (Module 3 lesson 1 goes deep on why). |
 | `src/features/language-space/languages.js` | Language Space (Module 4) | 241 lines, 91 languages | Hand-curated 3D embedding positions + family classifications. |
 
-Everything else is empty by design. You build the features.
+Modules 2-4 ship empty by design; you build those features. Module 1's `compare/` ships the pre-assembled reference (see [Reference implementation](#reference-implementation-module-1-compare) above) — overwrite when you start authoring.
 
 ## Structure (per framework folder)
 
@@ -58,13 +76,15 @@ Everything else is empty by design. You build the features.
 ├── index.html                        Vite entry HTML
 └── src/
     ├── main.{js,jsx}                 Mounts the App
-    ├── App.{vue,svelte,jsx}          Placeholder welcome card; replace as you build
+    ├── App.{vue,svelte,jsx}          Welcome card + mounts the assembled Compare reference
     ├── style.css                     Tailwind v4 + DaisyUI v5 imports (@import + @plugin)
     ├── shared/
     │   └── data/
     │       └── regions.js            Pre-shipped
     └── features/
-        ├── compare/                  Module 1 home (empty)
+        ├── compare/                  Module 1; Compare + logic.js pre-assembled (Lessons 1-4 reference)
+        │   ├── Compare.{vue,jsx,svelte}
+        │   └── logic.js              formatNumber + getComparison + humanizeContinent
         ├── hundred-people/           Module 2 home (empty)
         ├── countries-cartogram/      Module 3 home; countries.js pre-shipped
         │   └── countries.js
@@ -76,7 +96,7 @@ Module slugs match the production Globe Explorer codebase (`compare`, `hundred-p
 
 ## What this scaffold does NOT include
 
-- **No completed feature code.** No `Compare.vue`, no `Cartogram.svelte`, no `LanguageSpace.jsx`. You write those by following the lessons.
+- **No completed feature code for Modules 2-4.** No `HundredPeople`, no `Cartogram`, no `LanguageSpace`. You write those by following the lessons. (Module 1 `Compare` ships pre-assembled as the reference implementation — see the section above. It's the only exception.)
 - **No pre-installed test suites.** Each lesson includes test code blocks; paste them into `<feature>.test.{js,jsx}` files alongside your feature. Vitest is configured to find and run them.
 - **No routing or navigation across features.** Each framework folder's `App` shows one feature at a time. If you build multiple features and want a nav between them, you wire it yourself (or just edit `App` to import whichever you're working on right now).
 - **No CI / GitHub Actions.** Local-only. You run `npm test` on your machine.

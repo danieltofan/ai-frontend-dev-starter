@@ -6,11 +6,12 @@
 //   import LanguageSpace from './features/language-space/LanguageSpace.jsx'
 //
 // Then render <Compare />, <HundredPeople />, etc. in the App return below.
+import Compare from './features/compare/Compare.jsx'
 
 export default function App() {
   return (
-    <main className="min-h-screen bg-base-100 flex items-center justify-center p-8">
-      <div className="card bg-base-200 shadow-xl max-w-2xl">
+    <main className="min-h-screen bg-base-100 py-10 px-4 flex flex-col items-center gap-10">
+      <div className="card bg-base-200 shadow-xl max-w-2xl w-full">
         <div className="card-body">
           <h1 className="card-title text-3xl">AI-Assisted Frontend Development Starter</h1>
           <p className="text-base-content/70">React 19 + Vite + Tailwind v4 + DaisyUI v5 + Vitest</p>
@@ -51,6 +52,20 @@ export default function App() {
             </span>
           </div>
         </div>
+      </div>
+
+      <div className="w-full max-w-5xl">
+        <div className="text-center mb-4">
+          <div className="badge badge-outline">Reference implementation</div>
+          <p className="text-sm text-base-content/60 mt-2">
+            Module 1 Compare ships pre-assembled in all three framework folders so the cross-framework parity is
+            verifiable on first <code>npm run dev</code>. Diff{' '}
+            <code>src/features/compare/Compare.&#123;vue,jsx,svelte&#125;</code> across the sibling folders to see
+            the same UI rendered in each idiom. Remove the <code>&lt;Compare /&gt;</code> mount in{' '}
+            <code>App.jsx</code> when you're ready to author your own.
+          </p>
+        </div>
+        <Compare />
       </div>
     </main>
   )
