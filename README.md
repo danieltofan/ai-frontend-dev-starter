@@ -1,6 +1,6 @@
 # AI-Assisted Frontend Development Starter
 
-The fork-target scaffold for the Neurons Lab AI-Assisted Frontend Development course. Three framework variants (Vue 3, Svelte 5, React 19) sharing the same dataset, the same project structure, and the same Tailwind v4 + DaisyUI v5 + Vitest tooling, so you can pick a framework and build along with the lessons without fighting setup.
+The fork-target scaffold for the Neurons Lab AI-Assisted Frontend Development course. Three framework variants (Vue 3, Svelte 5, React 19) sharing the same dataset, the same project structure, and the same Tailwind v4 + DaisyUI v5 + Vitest tooling, so you can pick a framework and follow the lessons without fighting setup.
 
 > **Course:** [neurons-lab.pages.dev/courses/ai-frontend-dev](https://neurons-lab.pages.dev/courses/ai-frontend-dev)
 > **Reference implementation:** [github.com/danieltofan/globe-explorer](https://github.com/danieltofan/globe-explorer)
@@ -51,7 +51,7 @@ Each implements the same UI — two country dropdowns, a swap button, and five b
 
 Diff the three files side by side to see how the same data flow expresses itself in each idiom (`ref` + `computed`, `useState` + `useMemo`, `$state` + `$derived`). When you start authoring Module 1 yourself, replace the `<Compare />` mount in `App.{vue,jsx,svelte}` with your own work.
 
-**Scope:** the reference covers Module 1 Lessons 1–4 (data + dropdowns, comparison logic, progress bars, formatting + swap + flags). Lesson 5 (typeahead) is intentionally NOT pre-assembled — that's the workshop slice you build on top using AI, the same way the course was assembled. Modules 2, 3, and 4 (`hundred-people/`, `countries-cartogram/`, `language-space/`) are empty by design — you build them by following the lessons.
+**Scope:** the reference covers Module 1 Lessons 1–4 (data + dropdowns, comparison logic, progress bars, formatting + swap + flags). Lesson 5 (typeahead) is intentionally NOT pre-assembled — that's the workshop slice you build on top using AI, the same way the course was assembled. Modules 2, 3, and 4 (`hundred-people/`, `countries-cartogram/`, `language-space/`) do not ship completed components by design; their hand-curated data/assets are pre-shipped (`regions.js`, `countries.js`, `languages.js`) and you build the components on top by following the lessons.
 
 **Note on flag rendering:** the country-header section uses image flags served from [flagcdn.com](https://flagcdn.com) (lazy-loaded, sized to `w160`) rather than emoji, so the visual is identical across all OSes — no Windows regional-indicator-pair limitation to work around. Dropdowns themselves show plain country names (the flag image lives in the header card).
 
@@ -65,7 +65,7 @@ The hand-curated datasets the course depends on:
 | `src/features/countries-cartogram/countries.js` | Cartogram (Module 3) | 412 lines, 195 countries | Hand-curated x/y for every country. AI cannot generate these; geographic placement requires human judgment (Module 3 lesson 1 goes deep on why). |
 | `src/features/language-space/languages.js` | Language Space (Module 4) | 241 lines, 91 languages | Hand-curated 3D embedding positions + family classifications. |
 
-Modules 2-4 ship empty by design; you build those features. Module 1's `compare/` ships the pre-assembled reference (see [Reference implementation](#reference-implementation-module-1-compare) above) — overwrite when you start authoring.
+Modules 2-4 do not ship completed components by design; their hand-curated data above is pre-shipped, and you build the visualization components on top by following the lessons. Module 1's `compare/` ships the pre-assembled reference (see [Reference implementation](#reference-implementation-module-1-compare) above) — overwrite when you start authoring.
 
 ## Structure (per framework folder)
 
@@ -132,13 +132,13 @@ Most students will never need to do this. The starter is meant to be stable; the
 No. Pick one. The folders are independent. `npm install` inside `vue/` only affects `vue/`; the other two are untouched until you run `npm install` in them.
 
 **Can I do the course without ever running `npm install`?**
-Sort of. Every lesson has live in-browser code playgrounds (LiveCode iframes via livecodes.io) that show the running result in all three frameworks side by side. You can read the lessons and watch the code work without ever leaving the browser. But the full hands-on experience (your own repo, your own tests, your own commits, your own deploy) means installing locally in your fork.
+Sort of. The paid lessons include framework tabs that show the same lesson technique in Vue, React, and Svelte side by side, with runnable previews where the lesson needs them. You can read the lessons and compare the code without leaving the browser. The full hands-on experience (your own repo, your own tests, your own commits, your own deploy) means installing locally in your fork.
 
 **What if I want to deploy my finished work?**
 `npm run build` in any framework folder produces a static `dist/` directory. Drop that into Cloudflare Pages, GitHub Pages, Vercel, Netlify, or any static host. The course doesn't teach DevOps; that's intentional.
 
 **Do I need to know all three frameworks?**
-No. Pick one to lead. The course shows all three side by side in every LiveCode block, so you'll see the contrasts even if you only build in one. Most students do one framework end to end, then maybe redo Module 1 in a second framework as a comparison exercise.
+No. Pick one to lead. The paid lessons show Vue, React, and Svelte side by side in the framework tabs, so you'll see the contrasts even if you only build in one. Most students do one framework end to end, then maybe redo Module 1 in a second framework as a comparison exercise.
 
 **Can I commit my work to my fork?**
 Yes, that's the entire point. Your fork is your project. Commit, push, share with employers as a portfolio piece. The capstone (Module 5) explicitly references your fork's repo URL as a submission field for the optional showcase consent.
